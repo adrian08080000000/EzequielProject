@@ -76,6 +76,7 @@ public class Usuarios extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jButton3 = new javax.swing.JButton();
 
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Usuarios");
         setMinimumSize(new java.awt.Dimension(10, 10));
         setResizable(false);
@@ -175,9 +176,7 @@ public class Usuarios extends javax.swing.JFrame {
         getContentPane().add(textfield4);
         textfield4.setBounds(170, 310, 272, 28);
 
-        jButton1.setIcon(new javax.swing.ImageIcon("C:\\lab_proyecto\\fotos\\guardar.png")); // NOI18N
-        jButton1.setBorder(null);
-        jButton1.setBorderPainted(false);
+        jButton1.setText("guardar");
         jButton1.setContentAreaFilled(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -185,7 +184,7 @@ public class Usuarios extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(40, 460, 170, 70);
+        jButton1.setBounds(140, 470, 110, 40);
 
         textfield5.setPreferredSize(new java.awt.Dimension(64, 28));
         getContentPane().add(textfield5);

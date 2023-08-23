@@ -164,7 +164,7 @@ public class ManejoArchivo {
 
         //PERMISO DE USUARIO
         try {
-            File F2 = new File("Us_actual.txt");
+            File F2 = new File("actual.txt");
 
             if (F2.exists()) {
                 F2.delete();

@@ -1,2 +1,4 @@
 ezequiel088;1234;ezequiel;sanchez;no tengo;0
 jose1;1234;jose;coco;no hay;1
+ramon;1234;ramonsito;perales;123@hotmail.com;1
+fm;1234;fausto;martinez jimenez;fm@gmail.com;1

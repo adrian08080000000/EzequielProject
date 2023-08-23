@@ -26,7 +26,7 @@ public class principal extends javax.swing.JFrame {
         initComponents();
         this.setExtendedState(MAXIMIZED_BOTH);
 
-        File F2 = new File("Us_actual.txt");
+        File F2 = new File("actual.txt");
         try {
             if (!F2.exists()) {
                 F2.createNewFile();
@@ -41,14 +41,15 @@ public class principal extends javax.swing.JFrame {
                     String nivel_us = sl.next();
 
                     if ("1".equals(nivel_us)) {
-                        menu_usuarios.setVisible(false);
+                        modu_mantenimiento.setVisible(false);
+                        jprocesos.setVisible(false);
                     }
                 }
                 s.close();
             } catch (Exception ex) {
                 System.out.println("z01 " + ex);
             }
-            F2.delete();
+         
         } catch (FileNotFoundException e1) {
             System.out.println("x02 Error al leer Archivo " + e1);
         }
@@ -63,15 +64,25 @@ public class principal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenuItem3 = new javax.swing.JMenuItem();
         jMenuBar1 = new javax.swing.JMenuBar();
         modu_mantenimiento = new javax.swing.JMenu();
         menu_usuarios = new javax.swing.JMenuItem();
+        jfcatalogo = new javax.swing.JMenuItem();
+        jfarchivos = new javax.swing.JMenuItem();
+        jMenu1 = new javax.swing.JMenu();
+        jMenuItem4 = new javax.swing.JMenuItem();
+        jprocesos = new javax.swing.JMenu();
+        jMenu3 = new javax.swing.JMenu();
+        jMenuItem5 = new javax.swing.JMenuItem();
+
+        jMenuItem3.setText("jMenuItem3");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jMenuBar1.setPreferredSize(new java.awt.Dimension(297, 90));
 
-        modu_mantenimiento.setIcon(new javax.swing.ImageIcon("C:\\lab_proyecto\\fotos\\mantenimiento.png")); // NOI18N
+        modu_mantenimiento.setText("mantenimiento");
         modu_mantenimiento.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         modu_mantenimiento.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         modu_mantenimiento.setPreferredSize(new java.awt.Dimension(100, 70));
@@ -90,7 +101,6 @@ public class principal extends javax.swing.JFrame {
             }
         });
 
-        menu_usuarios.setIcon(new javax.swing.ImageIcon("C:\\lab_proyecto\\fotos\\usuario2.png")); // NOI18N
         menu_usuarios.setText("Usuarios");
         menu_usuarios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -99,7 +109,50 @@ public class principal extends javax.swing.JFrame {
         });
         modu_mantenimiento.add(menu_usuarios);
 
+        jfcatalogo.setText("Catalogo de usuario");
+        jfcatalogo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jfcatalogoActionPerformed(evt);
+            }
+        });
+        modu_mantenimiento.add(jfcatalogo);
+
+        jfarchivos.setText("archivos");
+        jfarchivos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jfarchivosActionPerformed(evt);
+            }
+        });
+        modu_mantenimiento.add(jfarchivos);
+
         jMenuBar1.add(modu_mantenimiento);
+
+        jMenu1.setText("movimientos");
+
+        jMenuItem4.setText("Transaciones");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem4);
+
+        jMenuBar1.add(jMenu1);
+
+        jprocesos.setText("Procesos");
+        jMenuBar1.add(jprocesos);
+
+        jMenu3.setText("Consultas");
+
+        jMenuItem5.setText("Consultas usuarios");
+        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem5ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem5);
+
+        jMenuBar1.add(jMenu3);
 
         setJMenuBar(jMenuBar1);
 
@@ -134,6 +187,36 @@ public class principal extends javax.swing.JFrame {
         Usuarios abrir = new Usuarios();
         abrir.setVisible(true);
     }//GEN-LAST:event_menu_usuariosActionPerformed
+
+    private void jfarchivosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jfarchivosActionPerformed
+        // TODO add your handling code here:
+        mantenimiento_doc abrir = new mantenimiento_doc();
+        abrir.setVisible(true);
+    }//GEN-LAST:event_jfarchivosActionPerformed
+
+    private void jfcatalogoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jfcatalogoActionPerformed
+        // TODO add your handling code here:
+        Catalogo_cuenta abrir = new Catalogo_cuenta();
+        abrir.setVisible(true);
+    }//GEN-LAST:event_jfcatalogoActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        // TODO add your handling code here:
+        cabeceracontable abrir;
+        try {
+            abrir = new cabeceracontable();
+              abrir.setVisible(true);
+        } catch (IOException ex) {
+            Logger.getLogger(principal.class.getName()).log(Level.SEVERE, null, ex);
+        }
+      
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
+
+    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+        // TODO add your handling code here:
+         consulta_usuarios abrir = new consulta_usuarios();
+        abrir.setVisible(true);
+    }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -173,7 +256,15 @@ public class principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JMenuItem jMenuItem5;
+    private javax.swing.JMenuItem jfarchivos;
+    private javax.swing.JMenuItem jfcatalogo;
+    private javax.swing.JMenu jprocesos;
     private javax.swing.JMenuItem menu_usuarios;
     private javax.swing.JMenu modu_mantenimiento;
     // End of variables declaration//GEN-END:variables

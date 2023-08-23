@@ -19,7 +19,7 @@ public class consulta_usuarios extends javax.swing.JFrame {
     /**
      * Creates new form consulta_usuarios
      */
-    String tablaus = "C:\\lab_proyecto\\tablas\\Usuarios.txt";
+    String tablaus = "Usuarios.txt";
     int contador = 0;
 
     public consulta_usuarios() {

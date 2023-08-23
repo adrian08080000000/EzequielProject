@@ -1,3 +1,5 @@
 1234;no lo se;admin;2;ezequiel;4;4455;890;433;2242;324324
-12345;banco bhd;Detalle;1;3;Activo;2023-08-08;14:22:51;600;500;10000
+12345;banco bhd;Detalles;1;3;Activo;2023-08-08;14:22:51;600;500;10000
 123456;banco agricola;General;1;4;Activo;2023-08-08;14:57:24;444.8;34343;1212
+1;activos;General;2;0;Activo;2023-08-17;20:21:38;0;0;0
+11;ACTIVO CORRIENTE;General;1;1;Activo;2023-08-13;18:28:29;0;0;0
